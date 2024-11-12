@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CiberIA</title>
+</head>
+<body style="background-image: url('./Fondo\ Azul.jpg')" class="text-white">
+    
+    <header class="bg-gray">
+        <a href="./idex.html" class="mx-4 text-black hover:text-white font-medium transition-colors duration-200">Regresar a pagina Principal</a>
+    </header>
+
+    <div>
+        <h1>CiberIA es tu asistente virtual que te ayudara con tus dudas.</h1>
+
+    </div>
+
+    <script>
+        window.addEventListener('mouseover', initLandbot, { once: true });
+        window.addEventListener('touchstart', initLandbot, { once: true });
+        var myLandbot;
+        function initLandbot() {
+          if (!myLandbot) {
+            var s = document.createElement('script');s.type = 'text/javascript';s.async = true;
+            s.addEventListener('load', function() {
+              var myLandbot = new Landbot.Livechat({
+                configUrl: 'https://storage.googleapis.com/landbot.site/v3/H-2677551-5HKSFXILAEGI0BNZ/index.json',
+              });
+            });
+            s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+          }
+        }
+    </script>
+</body>
+</html>
